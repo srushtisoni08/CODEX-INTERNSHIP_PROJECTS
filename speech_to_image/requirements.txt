@@ -1,3 +1,5 @@
-whisper
-Flask
-googletrans
+Flask==2.3.2
+openai-whisper==20231004
+googletrans==4.0.0-rc1
+requests==2.31.0
+Werkzeug==2.3.7
