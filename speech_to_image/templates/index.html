@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Speech to Image</title>
+</head>
+<body>
+    <h2>Record Your Voice</h2>
+    <button id="start">Start Recording</button>
+    <button id="stop" disabled>Stop Recording</button>
+    <form id="upload-form" method="POST" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="audio" id="audio-file" hidden />
+        <button type="submit" id="submit-btn" disabled>Generate Image</button>
+    </form>
+    <script>
+        let mediaRecorder;
+        let audioChunks = [];
+
+        const startBtn = document.getElementById("start");
+        const stopBtn = document.getElementById("stop");
+        const submitBtn = document.getElementById("submit-btn");
+        const audioFileInput = document.getElementById("audio-file");
+
+        startBtn.addEventListener("click", async () => {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            mediaRecorder = new MediaRecorder(stream);
+            mediaRecorder.start();
+            startBtn.disabled = true;
+            stopBtn.disabled = false;
+
+            mediaRecorder.ondataavailable = event => {
+                audioChunks.push(event.data);
+            };
+        });
+
+        stopBtn.addEventListener("click", () => {
+            mediaRecorder.stop();
+            startBtn.disabled = false;
+            stopBtn.disabled = true;
+
+            mediaRecorder.onstop = () => {
+                const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                const file = new File([audioBlob], "recording.wav", { type: 'audio/wav' });
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(file);
+                audioFileInput.files = dataTransfer.files;
+                submitBtn.disabled = false;
+            };
+        });
+    </script>
+</body>
+</html>
