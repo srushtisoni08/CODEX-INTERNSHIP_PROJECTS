@@ -63,8 +63,8 @@ To set up and run the projects locally, follow these steps:
 
    -Voice Assistant:
       ```bash
-cd voice_assistant
-python app.py
-   git clone https://github.com/srushtisoni08/CODEX-INTERNSHIP_PROJECTS.git
-   cd CODEX-INTERNSHIP_PROJECTS
-```
+      cd voice_assistant
+      python app.py
+         git clone https://github.com/srushtisoni08/CODEX-INTERNSHIP_PROJECTS.git
+         cd CODEX-INTERNSHIP_PROJECTS
+      ```
