@@ -33,35 +33,36 @@ To set up and run the projects locally, follow these steps:
    ```
 
 2. Set up a virtual environment:
-```bash
-python -m venv venv
-# On Windows
-venv\Scripts\activate
-# On macOS/Linux
-source venv/bin/activate
-```
+   
+   ```bash
+   python -m venv venv
+   # On Windows
+   venv\Scripts\activate
+   # On macOS/Linux
+   source venv/bin/activate
+   ```
 
 3. Install the required dependencies:
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 4. Run the desired project:
 
--Sentiment Analyzer:
-```ash
-cd sentimentanalyzer
-python app.py
-```
+   -Sentiment Analyzer:
+      ```bash
+      cd sentimentanalyzer
+      python app.py
+      ```
 
--Speech to Image:
-```bash
-cd speech_to_image
-python app.py
-```
+   -Speech to Image:
+      ```bash
+      cd speech_to_image
+      python app.py
+      ```
 
--Voice Assistant:
-```bash
+   -Voice Assistant:
+      ```bash
 cd voice_assistant
 python app.py
    git clone https://github.com/srushtisoni08/CODEX-INTERNSHIP_PROJECTS.git
