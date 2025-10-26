@@ -1,5 +1,9 @@
-Flask==2.3.2
-openai-whisper==20231004
-googletrans==4.0.0-rc1
-requests==2.31.0
-Werkzeug==2.3.7
+Flask==3.0.0
+Werkzeug==3.0.1
+openai-whisper
+deep-translator==1.11.4
+Pillow==10.4.0
+requests
+torch
+torchaudio
+numpy
