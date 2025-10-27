@@ -1,9 +1,0 @@
-Flask==3.0.0
-Werkzeug==3.0.1
-openai-whisper
-deep-translator==1.11.4
-Pillow==10.4.0
-requests
-torch
-torchaudio
-numpy
