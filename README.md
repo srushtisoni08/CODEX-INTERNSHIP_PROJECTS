@@ -112,32 +112,6 @@ To set up and run the projects locally, follow these steps:
 
 ---
 
-## 📂 Project Structure
-
-```
-CODEX-INTERNSHIP_PROJECTS/
-│
-├── sentimentanalyzer/
-│   ├── app.py
-│   ├── requirements.txt
-│   └── README.md
-│
-├── voice_assistant/
-│   ├── app.py
-│   ├── requirements.txt
-│   └── README.md
-│
-├── pydata_explorer/
-│   ├── app.py
-│   ├── requirements.txt
-│   └── README.md
-│
-├── requirements.txt
-└── README.md
-```
-
----
-
 ## 📋 Prerequisites
 
 - Python 3.8 or higher
